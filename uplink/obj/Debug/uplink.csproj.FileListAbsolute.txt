@@ -1,0 +1,21 @@
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\uplink.exe.config
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\obj\Debug\uplink.csprojResolveAssemblyReference.cache
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\uplink.exe
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\uplink.pdb
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\SharpDX.dll
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\SharpOVR.dll
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\SharpDX.xml
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\bin\Debug\SharpOVR.xml
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\obj\Debug\uplink.exe
+c:\users\cat\documents\visual studio 2013\Projects\uplink\uplink\obj\Debug\uplink.pdb
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\vJoyInterfaceWrap.dll
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\vJoyInterface.dll
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\vJoyInterface.pdb
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\vJoyInterface.lib
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\Castle.Core.dll
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\Castle.Windsor.dll
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\Castle.Core.xml
+C:\Users\Cat\Documents\Visual Studio 2013\Projects\uplink\uplink\bin\Debug\Castle.Windsor.xml
+C:\Users\Cat\dev\terminator-sc\uplink\bin\Debug\uplink.exe.config
+C:\Users\Cat\dev\terminator-sc\uplink\obj\Debug\uplink.exe
+C:\Users\Cat\dev\terminator-sc\uplink\obj\Debug\uplink.pdb
