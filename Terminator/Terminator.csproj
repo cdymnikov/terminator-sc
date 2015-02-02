@@ -60,6 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Input\Joystick\IJoystickReader.cs" />
+    <Compile Include="Input\Joystick\JoystickReader.cs" />
     <Compile Include="MouseKeyIO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

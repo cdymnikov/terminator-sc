@@ -1,5 +1,0 @@
-C:\Users\Cat\dev\terminator-sc\Terminator.Tests\bin\Debug\Terminator.Tests.dll
-C:\Users\Cat\dev\terminator-sc\Terminator.Tests\bin\Debug\Terminator.Tests.pdb
-C:\Users\Cat\dev\terminator-sc\Terminator.Tests\obj\Debug\Terminator.Tests.csprojResolveAssemblyReference.cache
-C:\Users\Cat\dev\terminator-sc\Terminator.Tests\obj\Debug\Terminator.Tests.dll
-C:\Users\Cat\dev\terminator-sc\Terminator.Tests\obj\Debug\Terminator.Tests.pdb
