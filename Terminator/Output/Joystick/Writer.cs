@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Terminator.Input.Joystick
+namespace Terminator.Output.Joystick
 {
-    interface IJoystickReader
+    public class Writer : IWriter
     {
+        public void WriteXAxis(int value)
+        {
+
+        }
     }
 }

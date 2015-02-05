@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Terminator.Input.Joystick
 {
-    class JoystickReader : IJoystickReader
+    interface IReader
     {
+        int ReadXAxis();
     }
 }
