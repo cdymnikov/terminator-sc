@@ -78,9 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Input\Joystick\IDeviceGuidMapFactory.cs" />
+    <Compile Include="Input\Joystick\IDeviceNameResolver.cs" />
     <Compile Include="Input\Joystick\IReader.cs" />
-    <Compile Include="Input\Joystick\DeviceGuidMapFactory.cs" />
+    <Compile Include="Input\Joystick\DeviceNameResolver.cs" />
     <Compile Include="Input\Joystick\Reader.cs" />
     <Compile Include="MouseKeyIO.cs" />
     <Compile Include="Output\Joystick\Writer.cs" />
