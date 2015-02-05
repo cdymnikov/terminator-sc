@@ -78,7 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Input\Joystick\IDeviceGuidMapFactory.cs" />
     <Compile Include="Input\Joystick\IReader.cs" />
+    <Compile Include="Input\Joystick\DeviceGuidMapFactory.cs" />
     <Compile Include="Input\Joystick\Reader.cs" />
     <Compile Include="MouseKeyIO.cs" />
     <Compile Include="Output\Joystick\Writer.cs" />
@@ -87,7 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="vJoyInterface.lib">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

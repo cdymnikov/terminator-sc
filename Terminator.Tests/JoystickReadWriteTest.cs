@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,6 +12,8 @@ namespace Terminator.Tests
         [TestMethod]
         public void Axis_value_is_centered()
         {
+            var joystickName = ConfigurationManager.AppSettings["PhysicalJoystickTestDevice"];
+
             var directInput = new DirectInput();
 
             var joystickGuids = directInput.GetDevices(DeviceType.Joystick,
