@@ -63,7 +63,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TestDevices.cs" />
     <Compile Include="JoystickReadWriteTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
