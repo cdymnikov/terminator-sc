@@ -1,6 +1,6 @@
 ﻿using Terminator.Device;
 
-namespace Terminator.Output.Joystick
+namespace Terminator.Device.Output.Joystick
 {
     public interface IWriter
     {

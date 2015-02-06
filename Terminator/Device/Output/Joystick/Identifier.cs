@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharpDX.DirectInput;
 
-namespace Terminator.Output.Joystick
+namespace Terminator.Device.Output.Joystick
 {
     public class Identifier
     {

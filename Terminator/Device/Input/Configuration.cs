@@ -3,9 +3,9 @@ using System.Collections;
 using System.Text;
 using System.Configuration;
 using System.Xml;
-using Terminator.Input.DirectX;
+using Terminator.Device.Input.DirectX;
 
-namespace Terminator.Input
+namespace Terminator.Device.Input
 {
     public class Configuration : ConfigurationSection
     {

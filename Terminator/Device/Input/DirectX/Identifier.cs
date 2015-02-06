@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharpDX.DirectInput;
 
-namespace Terminator.Input.DirectX
+namespace Terminator.Device.Input.DirectX
 {
     public class Identifier
     {

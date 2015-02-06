@@ -5,13 +5,13 @@ using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Terminator.Device;
-using Terminator.Input.DirectX;
-using Terminator.Input;
-using Terminator.Output;
-using Terminator.Output.Joystick;
+using Terminator.Device.Input.DirectX;
+using Terminator.Device.Input;
+using Terminator.Device.Output;
+using Terminator.Device.Output.Joystick;
 using System.Threading;
 
-namespace Terminator.Tests
+namespace Terminator.Device
 {
     [TestClass]
     public class When_writing_and_reading_axis_value

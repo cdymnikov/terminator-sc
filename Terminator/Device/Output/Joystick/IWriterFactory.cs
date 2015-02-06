@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Terminator.Input.DirectX
+namespace Terminator.Device.Output.Joystick
 {
-    public interface IReaderFactory
+    public interface IWriterFactory
     {
-        IReader Create(Identifier id);
+        IWriter Create(Identifier id);
     }
 }

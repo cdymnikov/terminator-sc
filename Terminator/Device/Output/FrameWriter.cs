@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using Terminator.Output.Joystick;
+using Terminator.Device.Output.Joystick;
 using Terminator.Device;
 
-namespace Terminator.Output
+namespace Terminator.Device.Output
 {
     public class FrameWriter : IFrameWriter
     {

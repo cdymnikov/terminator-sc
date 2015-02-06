@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
-using Terminator.Input.DirectX;
+using Terminator.Device.Input.DirectX;
 using Terminator.Device;
 
-namespace Terminator.Input
+namespace Terminator.Device.Input
 {
     public class FrameReader : IFrameReader
     {

@@ -4,7 +4,7 @@ using System.Text;
 using System.Configuration;
 using System.Xml;
 
-namespace Terminator.Output
+namespace Terminator.Device.Output
 {
     public class Configuration : ConfigurationSection
     {

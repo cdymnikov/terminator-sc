@@ -3,10 +3,10 @@ using System.Configuration;
 using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Terminator.Input.DirectX;
-using Terminator.Input;
-using Terminator.Output;
-using Terminator.Output.Joystick;
+using Terminator.Device.Input.DirectX;
+using Terminator.Device.Input;
+using Terminator.Device.Output;
+using Terminator.Device.Output.Joystick;
 using System.Threading;
 using Terminator;
 

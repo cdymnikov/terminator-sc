@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Terminator.Device;
-using Terminator.Input.DirectX;
+using Terminator.Device.Input.DirectX;
 
-namespace Terminator.Input
+namespace Terminator.Device.Input
 {
     public interface IFrameReader
     {

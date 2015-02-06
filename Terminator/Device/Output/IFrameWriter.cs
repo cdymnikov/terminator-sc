@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Terminator.Device;
-using Terminator.Output.Joystick;
+using Terminator.Device.Output.Joystick;
 
-namespace Terminator.Output
+namespace Terminator.Device.Output
 {
     public interface IFrameWriter
     {

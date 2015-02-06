@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Terminator.Device;
 
-namespace Terminator.Input.DirectX
+namespace Terminator.Device.Input.DirectX
 {
-    public interface IDeviceNameResolver
+    public interface IReader
     {
-        Guid Resolve(Identifier id);
+        State Read();
     }
 }

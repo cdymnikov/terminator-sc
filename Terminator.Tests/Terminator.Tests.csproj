@@ -6,7 +6,7 @@
     <ProjectGuid>{29A2FD77-2264-48DE-84AD-3E4911C027D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Terminator.Tests</RootNamespace>
+    <RootNamespace>Terminator</RootNamespace>
     <AssemblyName>Terminator.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -70,7 +70,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="LoopManagerTests.cs" />
-    <Compile Include="JoystickReadWriteTest.cs" />
+    <Compile Include="Device\JoystickReadWriteTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

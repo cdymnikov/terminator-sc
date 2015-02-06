@@ -2,16 +2,15 @@
 using Castle.Windsor;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
-using SharpDX.DirectInput;
 
-namespace Terminator.Output
+namespace Terminator.Device.Input.DirectX
 {
     public class Installer : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Install(new Terminator.Output.Joystick.Installer());
-            container.Register(Component.For<IFrameWriter>().ImplementedBy<FrameWriter>());
+            container.Register(Component.For<IDeviceNameResolver>().ImplementedBy<DeviceNameResolver>());
+            container.Register(Component.For<IReaderFactory>().ImplementedBy<ReaderFactory>());
         }
     }
 }

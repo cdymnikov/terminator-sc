@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Terminator.Device;
 using vJoyInterfaceWrap;
 
-namespace Terminator.Output.Joystick
+namespace Terminator.Device.Output.Joystick
 {
     public class Writer : IWriter
     {

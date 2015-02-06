@@ -2,15 +2,16 @@
 using Castle.Windsor;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
+using SharpDX.DirectInput;
 
-namespace Terminator.Input.DirectX
+namespace Terminator.Device.Output
 {
     public class Installer : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IDeviceNameResolver>().ImplementedBy<DeviceNameResolver>());
-            container.Register(Component.For<IReaderFactory>().ImplementedBy<ReaderFactory>());
+            container.Install(new Joystick.Installer());
+            container.Register(Component.For<IFrameWriter>().ImplementedBy<FrameWriter>());
         }
     }
 }

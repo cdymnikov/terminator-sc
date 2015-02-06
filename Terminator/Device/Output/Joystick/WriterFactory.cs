@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using vJoyInterfaceWrap;
 
-namespace Terminator.Output.Joystick
+namespace Terminator.Device.Output.Joystick
 {
     public class WriterFactory : IWriterFactory
     {
