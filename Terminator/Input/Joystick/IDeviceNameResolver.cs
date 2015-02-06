@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Terminator.Input.Joystick
 {
-    interface IDeviceNameResolver
+    public interface IDeviceNameResolver
     {
-        IEnumerable<Guid> Resolve(string ProductName);
+        Guid Resolve(Identifier id);
     }
 }

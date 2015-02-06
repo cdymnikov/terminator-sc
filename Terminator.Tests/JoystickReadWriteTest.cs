@@ -10,19 +10,15 @@ namespace Terminator.Tests
     [TestClass]
     public class When_reading_axis_value_without_interraction
     {
+        private readonly Resolver _resolver = new Resolver();
+
         [TestMethod]
         public void Axis_value_is_centered()
         {
-            var directInput = new DirectInput();
+            var joystickProductName = ConfigurationManager.AppSettings["PhysicalJoystickTestDevice"].ToString();
+            var joystickProductNumber = int.Parse(ConfigurationManager.AppSettings["PhysicalJoystickTestDeviceNumber"]);
 
-            var guid = new DeviceNameResolver(directInput).Resolve(
-                ConfigurationManager.AppSettings["PhysicalJoystickTestDevice"].ToString()).First();
-
-            var joystick = new SharpDX.DirectInput.Joystick(directInput, guid);
-            joystick.Properties.BufferSize = 128;
-            joystick.Acquire();
-
-            var reader = new Input.Joystick.Reader(joystick);
+            var reader = _resolver.Resolve<IReaderFactory>().Create(new Identifier(joystickProductName, joystickProductNumber));
 
             var axisValue = reader.ReadXAxis();
 

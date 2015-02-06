@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Terminator.Input.Joystick
 {
-    public interface IReader
+    public interface IReaderFactory
     {
-        int ReadXAxis();
+        IReader Create(Identifier id);
     }
 }

@@ -18,9 +18,12 @@ namespace Terminator.Input.Joystick
             _directInput = directInput;
         }
 
-        public IEnumerable<Guid> Resolve(string ProductName)
+        public Guid Resolve(Identifier id)
         {
-            return GetAllDevices(_allDeviceTypes).Where(x => x.ProductName == ProductName).Select(x => x.InstanceGuid);
+            return GetAllDevices(_allDeviceTypes)
+                .Where(x => x.ProductName == id.ProductName)
+                .Select(x => x.InstanceGuid)
+                .ToList()[id.Number];
         }
 
         private IEnumerable<DeviceInstance> GetAllDevices(params DeviceType[] deviceTypes)

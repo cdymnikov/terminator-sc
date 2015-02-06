@@ -78,6 +78,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Input\Installer.cs" />
+    <Compile Include="Input\Joystick\Identifier.cs" />
+    <Compile Include="Input\Joystick\Installer.cs" />
+    <Compile Include="Input\Joystick\ReaderFactory.cs" />
+    <Compile Include="Input\Joystick\IReaderFactory.cs" />
     <Compile Include="Input\Joystick\IDeviceNameResolver.cs" />
     <Compile Include="Input\Joystick\IReader.cs" />
     <Compile Include="Input\Joystick\DeviceNameResolver.cs" />
@@ -85,8 +90,10 @@
     <Compile Include="MouseKeyIO.cs" />
     <Compile Include="Output\Joystick\Writer.cs" />
     <Compile Include="Output\Joystick\IWriter.cs" />
+    <Compile Include="Installer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

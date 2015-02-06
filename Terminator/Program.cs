@@ -1,4 +1,7 @@
-﻿namespace Uplink
+﻿using Castle.Core;
+using Castle.Windsor;
+
+namespace Terminator
 {
     class Program
     {
