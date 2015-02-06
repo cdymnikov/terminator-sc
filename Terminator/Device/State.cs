@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Terminator.Transform;
 
-namespace Terminator.Input
+namespace Terminator.Device
 {
     public class State
     {

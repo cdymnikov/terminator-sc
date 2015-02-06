@@ -82,7 +82,7 @@
     <Compile Include="Input\Configuration.cs" />
     <Compile Include="Input\FrameReader.cs" />
     <Compile Include="Input\IFrameReader.cs" />
-    <Compile Include="Input\Device\State.cs" />
+    <Compile Include="Device\State.cs" />
     <Compile Include="Input\Installer.cs" />
     <Compile Include="Input\Device\Identifier.cs" />
     <Compile Include="Input\Device\Installer.cs" />
@@ -94,6 +94,8 @@
     <Compile Include="Input\Device\Reader.cs" />
     <Compile Include="MouseKeyIO.cs" />
     <Compile Include="Output\Configuration.cs" />
+    <Compile Include="Output\FrameWriter.cs" />
+    <Compile Include="Output\IFrameWriter.cs" />
     <Compile Include="Output\Installer.cs" />
     <Compile Include="Output\Joystick\Identifier.cs" />
     <Compile Include="Output\Joystick\Installer.cs" />
@@ -105,8 +107,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resolver.cs" />
-    <Compile Include="Transform\Axis.cs" />
-    <Compile Include="Transform\Installer.cs" />
+    <Compile Include="Device\Axis.cs" />
     <Compile Include="LoopManager.cs" />
     <Compile Include="ILoopManager.cs" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace Terminator.Transform
+﻿namespace Terminator.Device
 {
     public enum Axis
     {

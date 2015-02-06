@@ -11,7 +11,6 @@ namespace Terminator
         {
             container.Install(new Terminator.Input.Installer());
             container.Install(new Terminator.Output.Installer());
-            container.Install(new Terminator.Transform.Installer());
 
             container.Register(Component.For<ILoopManager>().ImplementedBy<LoopManager>());
         }

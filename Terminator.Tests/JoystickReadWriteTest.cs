@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Terminator.Transform;
+using Terminator.Device;
 using Terminator.Input.Device;
 using Terminator.Input;
 using Terminator.Output;
@@ -24,26 +24,63 @@ namespace Terminator.Tests
             var input = ((Input.Configuration)ConfigurationManager.GetSection("test/input")).Joysticks["Virtual Joystick Input"];
             var output = ((Output.Configuration)ConfigurationManager.GetSection("test/output")).Joysticks["Virtual Joystick Output"];
 
-            var writer = _resolver.Resolve<IWriterFactory>().Create(output);
-            var reader = new FrameReader(new Dictionary<Input.Identifier, IReader>() { {input, _resolver.Resolve<IReaderFactory>().Create(input)} });
+            var writer = new FrameWriter(
+                new Dictionary<Output.Joystick.Identifier, IWriter>() { 
+                    {output, _resolver.Resolve<IWriterFactory>().Create(output)} 
+                });
 
-            writer.WriteXAxis(1000);
+            var reader = new FrameReader(
+                new Dictionary<Input.Identifier, IReader>() { 
+                    {input, _resolver.Resolve<IReaderFactory>().Create(input)} 
+                });
+
+            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
+                { 
+                    {output, new State() {Axis = new Dictionary<Axis, int> 
+                        {
+                            {Axis.X, 1000}
+                        } } }
+                });
             Thread.Sleep(1);
             Assert.AreEqual(1000, reader.Read()[input].Axis[Axis.X]);
 
-            writer.WriteXAxis(1001);
+            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
+                { 
+                    {output, new State() {Axis = new Dictionary<Axis, int> 
+                        {
+                            {Axis.X, 1001}
+                        } } }
+                });
             Thread.Sleep(1);
             Assert.AreEqual(1001, reader.Read()[input].Axis[Axis.X]);
 
-            writer.WriteXAxis(0);
+            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
+                { 
+                    {output, new State() {Axis = new Dictionary<Axis, int> 
+                        {
+                            {Axis.X, 0}
+                        } } }
+                });
             Thread.Sleep(1);
             Assert.AreEqual(0, reader.Read()[input].Axis[Axis.X]);
 
-            writer.WriteXAxis(-1000);
+            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
+                { 
+                    {output, new State() {Axis = new Dictionary<Axis, int> 
+                        {
+                            {Axis.X, -1000}
+                        } } }
+                });
             Thread.Sleep(1);
             Assert.AreEqual(-1000, reader.Read()[input].Axis[Axis.X]);
 
-            writer.WriteXAxis(-1001);
+            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
+                { 
+                    {output, new State() {Axis = new Dictionary<Axis, int> 
+                        {
+                            {Axis.X, -1001}
+                        } } }
+                });
             Thread.Sleep(1);
             Assert.AreEqual(-1001, reader.Read()[input].Axis[Axis.X]);
         }

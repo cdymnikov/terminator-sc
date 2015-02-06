@@ -1,8 +1,6 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Terminator.Device;
 using vJoyInterfaceWrap;
 
 namespace Terminator.Output.Joystick
@@ -11,6 +9,15 @@ namespace Terminator.Output.Joystick
     {
         private readonly Identifier _id;
         private readonly vJoy _device;
+        private readonly IDictionary<Axis, HID_USAGES> _axisToVjoy = new Dictionary<Axis, HID_USAGES>()
+            {
+                {Axis.X, HID_USAGES.HID_USAGE_X},
+                {Axis.Y, HID_USAGES.HID_USAGE_Y},
+                {Axis.Z, HID_USAGES.HID_USAGE_Z},
+                {Axis.XRot, HID_USAGES.HID_USAGE_RX},
+                {Axis.YRot, HID_USAGES.HID_USAGE_RY},
+                {Axis.ZRot, HID_USAGES.HID_USAGE_RZ},
+            };
 
         public Writer(Identifier id, vJoy device)
         {
@@ -18,9 +25,17 @@ namespace Terminator.Output.Joystick
             _device = device;
         }
 
-        public void WriteXAxis(int value)
+        public void Write(State state)
         {
-            _device.SetAxis(value + 16384, _id.Id, HID_USAGES.HID_USAGE_X);
+            state.Axis.ToList().ForEach(x => 
+                {
+                    _device.SetAxis(Transform(x.Value), _id.Id, _axisToVjoy[x.Key]);
+                });
+        }
+
+        private int Transform(int value)
+        {
+            return value + 16384;
         }
     }
 }

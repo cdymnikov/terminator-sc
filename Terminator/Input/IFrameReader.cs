@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Terminator.Device;
 
 namespace Terminator.Input
 {

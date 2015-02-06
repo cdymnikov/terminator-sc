@@ -11,6 +11,7 @@ namespace Terminator.Output
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Install(new Terminator.Output.Joystick.Installer());
+            container.Register(Component.For<IFrameWriter>().ImplementedBy<FrameWriter>());
         }
     }
 }

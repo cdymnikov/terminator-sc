@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharpDX.DirectInput;
-using Terminator.Transform;
+using Terminator.Device;
 
 namespace Terminator.Input.Device
 {

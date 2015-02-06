@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
 using Terminator.Input.Device;
+using Terminator.Device;
 
 namespace Terminator.Input
 {
