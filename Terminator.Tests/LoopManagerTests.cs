@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Terminator.Input.Joystick;
+using Terminator.Input.Device;
 using Terminator.Input;
 using Terminator.Output;
 using Terminator.Output.Joystick;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using System.Configuration;
 using System.Xml;
+
 namespace Terminator.Input
 {
     public class Configuration : ConfigurationSection
@@ -66,12 +67,12 @@ namespace Terminator.Input
             }
         }
 
-        public Joystick.Identifier this[string name]
+        public Identifier this[string name]
         {
             get 
             {
                 var configId = (JoystickIdentifier)base.BaseGet(name);
-                return new Joystick.Identifier(configId.ProductName, configId.ProductNumber); 
+                return new Identifier(configId.ProductName, configId.ProductNumber); 
             }
         }
         #endregion

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharpDX.DirectInput;
 
-namespace Terminator.Input.Joystick
+namespace Terminator.Input.Device
 {
     public class ReaderFactory : IReaderFactory
     {
@@ -25,7 +25,7 @@ namespace Terminator.Input.Joystick
             joystick.Properties.BufferSize = 128;
             joystick.Acquire();
 
-            return new Input.Joystick.Reader(joystick);
+            return new Input.Device.Reader(joystick);
         }
     }
 }

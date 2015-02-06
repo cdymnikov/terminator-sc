@@ -3,7 +3,7 @@ using Castle.Windsor;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 
-namespace Terminator.Input.Joystick
+namespace Terminator.Input.Device
 {
     public class Installer : IWindsorInstaller
     {

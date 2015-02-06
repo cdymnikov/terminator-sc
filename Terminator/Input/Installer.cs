@@ -10,7 +10,7 @@ namespace Terminator.Input
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Install(new Terminator.Input.Joystick.Installer());
+            container.Install(new Terminator.Input.Device.Installer());
             container.Register(Component.For<DirectInput>().ImplementedBy<DirectInput>());
         }
     }

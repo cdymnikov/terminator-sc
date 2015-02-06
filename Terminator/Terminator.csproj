@@ -80,15 +80,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Input\Configuration.cs" />
+    <Compile Include="Input\FrameReader.cs" />
+    <Compile Include="Input\IFrameReader.cs" />
+    <Compile Include="Input\Device\State.cs" />
     <Compile Include="Input\Installer.cs" />
-    <Compile Include="Input\Joystick\Identifier.cs" />
-    <Compile Include="Input\Joystick\Installer.cs" />
-    <Compile Include="Input\Joystick\ReaderFactory.cs" />
-    <Compile Include="Input\Joystick\IReaderFactory.cs" />
-    <Compile Include="Input\Joystick\IDeviceNameResolver.cs" />
-    <Compile Include="Input\Joystick\IReader.cs" />
-    <Compile Include="Input\Joystick\DeviceNameResolver.cs" />
-    <Compile Include="Input\Joystick\Reader.cs" />
+    <Compile Include="Input\Device\Identifier.cs" />
+    <Compile Include="Input\Device\Installer.cs" />
+    <Compile Include="Input\Device\ReaderFactory.cs" />
+    <Compile Include="Input\Device\IReaderFactory.cs" />
+    <Compile Include="Input\Device\IDeviceNameResolver.cs" />
+    <Compile Include="Input\Device\IReader.cs" />
+    <Compile Include="Input\Device\DeviceNameResolver.cs" />
+    <Compile Include="Input\Device\Reader.cs" />
     <Compile Include="MouseKeyIO.cs" />
     <Compile Include="Output\Configuration.cs" />
     <Compile Include="Output\Installer.cs" />
@@ -102,6 +105,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resolver.cs" />
+    <Compile Include="Transform\Axis.cs" />
     <Compile Include="Transform\Installer.cs" />
     <Compile Include="LoopManager.cs" />
     <Compile Include="ILoopManager.cs" />

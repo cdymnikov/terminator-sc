@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Terminator.Input.Joystick;
+using Terminator.Transform;
+using Terminator.Input.Device;
 using Terminator.Input;
 using Terminator.Output;
 using Terminator.Output.Joystick;
@@ -23,27 +25,27 @@ namespace Terminator.Tests
             var output = ((Output.Configuration)ConfigurationManager.GetSection("test/output")).Joysticks["Virtual Joystick Output"];
 
             var writer = _resolver.Resolve<IWriterFactory>().Create(output);
-            var reader = _resolver.Resolve<IReaderFactory>().Create(input);
+            var reader = new FrameReader(new Dictionary<Input.Identifier, IReader>() { {input, _resolver.Resolve<IReaderFactory>().Create(input)} });
 
             writer.WriteXAxis(1000);
             Thread.Sleep(1);
-            Assert.AreEqual(1000, reader.ReadXAxis());
+            Assert.AreEqual(1000, reader.Read()[input].Axis[Axis.X]);
 
             writer.WriteXAxis(1001);
             Thread.Sleep(1);
-            Assert.AreEqual(1001, reader.ReadXAxis());
+            Assert.AreEqual(1001, reader.Read()[input].Axis[Axis.X]);
 
             writer.WriteXAxis(0);
             Thread.Sleep(1);
-            Assert.AreEqual(0, reader.ReadXAxis());
+            Assert.AreEqual(0, reader.Read()[input].Axis[Axis.X]);
 
             writer.WriteXAxis(-1000);
             Thread.Sleep(1);
-            Assert.AreEqual(-1000, reader.ReadXAxis());
+            Assert.AreEqual(-1000, reader.Read()[input].Axis[Axis.X]);
 
             writer.WriteXAxis(-1001);
             Thread.Sleep(1);
-            Assert.AreEqual(-1001, reader.ReadXAxis());
+            Assert.AreEqual(-1001, reader.Read()[input].Axis[Axis.X]);
         }
     }
 }
