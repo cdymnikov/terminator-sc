@@ -7,6 +7,7 @@ using Terminator.Input.Joystick;
 using Terminator.Input;
 using Terminator.Output;
 using Terminator.Output.Joystick;
+using System.Threading;
 
 namespace Terminator.Tests
 {
@@ -24,11 +25,21 @@ namespace Terminator.Tests
             var writer = _resolver.Resolve<IWriterFactory>().Create(output);
             var reader = _resolver.Resolve<IReaderFactory>().Create(input);
 
-            writer.WriteXAxis(1337);
-            Assert.AreEqual(1337, reader.ReadXAxis());
+            writer.WriteXAxis(1000);
+            Thread.Sleep(1);
+            Assert.AreEqual(1000, reader.ReadXAxis());
 
-            writer.WriteXAxis(2338);
-            Assert.AreEqual(2338, reader.ReadXAxis());
+            writer.WriteXAxis(1001);
+            Thread.Sleep(1);
+            Assert.AreEqual(1001, reader.ReadXAxis());
+
+            writer.WriteXAxis(-1000);
+            Thread.Sleep(1);
+            Assert.AreEqual(-1000, reader.ReadXAxis());
+
+            writer.WriteXAxis(-1001);
+            Thread.Sleep(1);
+            Assert.AreEqual(-1001, reader.ReadXAxis());
         }
     }
 }

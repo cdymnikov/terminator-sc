@@ -20,7 +20,7 @@ namespace Terminator.Input.Joystick
         {
             _joystick.Poll();
             var state = _joystick.GetCurrentState();
-            return state.X/2 + 1;
+            return state.X / 2 + 1 - 16384;
         }
     }
 }

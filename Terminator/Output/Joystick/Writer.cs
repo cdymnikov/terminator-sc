@@ -20,7 +20,7 @@ namespace Terminator.Output.Joystick
 
         public void WriteXAxis(int value)
         {
-            _device.SetAxis(value, _id.Id, HID_USAGES.HID_USAGE_X);
+            _device.SetAxis(value + 16384, _id.Id, HID_USAGES.HID_USAGE_X);
         }
     }
 }
