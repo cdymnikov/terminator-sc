@@ -65,6 +65,7 @@
       <HintPath>..\packages\SharpOVR.0.4.4.0\lib\SharpOVR.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -78,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\Devices.cs" />
     <Compile Include="Input\Installer.cs" />
     <Compile Include="Input\Joystick\Identifier.cs" />
     <Compile Include="Input\Joystick\Installer.cs" />
