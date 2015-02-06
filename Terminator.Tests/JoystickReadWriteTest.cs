@@ -5,7 +5,7 @@ using System.Linq;
 using SharpDX.DirectInput;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Terminator.Device;
-using Terminator.Input.Device;
+using Terminator.Input.DirectX;
 using Terminator.Input;
 using Terminator.Output;
 using Terminator.Output.Joystick;
@@ -30,7 +30,7 @@ namespace Terminator.Tests
                 });
 
             var reader = new FrameReader(
-                new Dictionary<Input.Identifier, IReader>() { 
+                new Dictionary<Input.DirectX.Identifier, IReader>() { 
                     {input, _resolver.Resolve<IReaderFactory>().Create(input)} 
                 });
 

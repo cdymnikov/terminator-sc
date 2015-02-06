@@ -1,12 +1,11 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharpDX.DirectInput;
 
-namespace Terminator.Input
+namespace Terminator.Input.DirectX
 {
     public class Identifier
     {

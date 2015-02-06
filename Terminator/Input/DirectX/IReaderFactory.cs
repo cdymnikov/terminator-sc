@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Terminator.Input.Device
+namespace Terminator.Input.DirectX
 {
     public interface IReaderFactory
     {

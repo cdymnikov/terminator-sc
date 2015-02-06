@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SharpDX.DirectInput;
 using Terminator.Device;
 
-namespace Terminator.Input.Device
+namespace Terminator.Input.DirectX
 {
     public class Reader : IReader
     {

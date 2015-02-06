@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharpDX.DirectInput;
 
-namespace Terminator.Input.Device
+namespace Terminator.Input.DirectX
 {
     public class DeviceNameResolver : IDeviceNameResolver
     {

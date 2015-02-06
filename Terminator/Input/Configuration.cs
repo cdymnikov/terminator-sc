@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using System.Configuration;
 using System.Xml;
+using Terminator.Input.DirectX;
 
 namespace Terminator.Input
 {
