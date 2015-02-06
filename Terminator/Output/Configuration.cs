@@ -3,7 +3,8 @@ using System.Collections;
 using System.Text;
 using System.Configuration;
 using System.Xml;
-namespace Terminator.Input
+
+namespace Terminator.Output
 {
     public class Configuration : ConfigurationSection
     {
@@ -71,7 +72,7 @@ namespace Terminator.Input
             get 
             {
                 var configId = (JoystickIdentifier)base.BaseGet(name);
-                return new Joystick.Identifier(configId.ProductName, configId.ProductNumber); 
+                return new Joystick.Identifier(configId.Id); 
             }
         }
         #endregion
@@ -104,29 +105,16 @@ namespace Terminator.Input
             }
         }
 
-        [ConfigurationProperty("productName", IsRequired = true)]
-        public string ProductName
+        [ConfigurationProperty("id", IsRequired = true)]
+        public uint Id
         {
             get
             {
-                return (string)this["productName"];
+                return (uint)this["id"];
             }
             set
             {
-                this["productName"] = value;
-            }
-        }
-
-        [ConfigurationProperty("productNumber", IsRequired = true)]
-        public int ProductNumber
-        {
-            get
-            {
-                return (int)this["productNumber"];
-            }
-            set
-            {
-                this["productNumber"] = value;
+                this["id"] = value;
             }
         }
     }

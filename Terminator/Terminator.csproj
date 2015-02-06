@@ -90,6 +90,12 @@
     <Compile Include="Input\Joystick\DeviceNameResolver.cs" />
     <Compile Include="Input\Joystick\Reader.cs" />
     <Compile Include="MouseKeyIO.cs" />
+    <Compile Include="Output\Configuration.cs" />
+    <Compile Include="Output\Installer.cs" />
+    <Compile Include="Output\Joystick\Identifier.cs" />
+    <Compile Include="Output\Joystick\Installer.cs" />
+    <Compile Include="Output\Joystick\IWriterFactory.cs" />
+    <Compile Include="Output\Joystick\WriterFactory.cs" />
     <Compile Include="Output\Joystick\Writer.cs" />
     <Compile Include="Output\Joystick\IWriter.cs" />
     <Compile Include="Installer.cs" />

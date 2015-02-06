@@ -3,14 +3,13 @@ using Castle.Windsor;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 
-namespace Terminator
+namespace Terminator.Output.Joystick
 {
     public class Installer : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Install(new Terminator.Input.Installer());
-            container.Install(new Terminator.Output.Installer());
+            container.Register(Component.For<IWriterFactory>().ImplementedBy<WriterFactory>());
         }
     }
 }
