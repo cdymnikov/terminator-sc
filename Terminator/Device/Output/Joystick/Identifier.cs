@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +15,19 @@ namespace Terminator.Device.Output.Joystick
         }
 
         public uint Id { get; private set; }
+
+        public override bool Equals(Object obj)
+        {
+            Identifier other = obj as Identifier;
+            if (other == null)
+                return false;
+            else
+                return Id.Equals(other.Id);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Id.GetHashCode(); 
+        }
     }
 }

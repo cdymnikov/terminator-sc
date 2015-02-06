@@ -18,5 +18,19 @@ namespace Terminator.Device.Input.DirectX
         public string ProductName { get; private set; }
 
         public int Number { get; private set; }
+
+        public override bool Equals(Object obj)
+        {
+            Identifier other = obj as Identifier;
+            if (other == null)
+                return false;
+            else
+                return ProductName.Equals(other.ProductName) && Number.Equals(other.Number);
+        }
+
+        public override int GetHashCode()
+        {
+            return ProductName.GetHashCode() * Number.GetHashCode();
+        }
     }
 }
