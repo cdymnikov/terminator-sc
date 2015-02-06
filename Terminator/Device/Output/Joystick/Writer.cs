@@ -33,9 +33,9 @@ namespace Terminator.Device.Output.Joystick
                 });
         }
 
-        private int Transform(int value)
+        private int Transform(double value)
         {
-            return value + 16384;
+            return ((int)(value * 16384.0)) + 16384;
         }
     }
 }

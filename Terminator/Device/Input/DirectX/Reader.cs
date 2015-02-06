@@ -24,7 +24,7 @@ namespace Terminator.Device.Input.DirectX
 
             return new State()
                 {
-                    Axis = new Dictionary<Axis, int>()
+                    Axis = new Dictionary<Axis, double>()
                     {
                         {Axis.X, TranformAxis(state.X)},
                         {Axis.Y, TranformAxis(state.Y)},
@@ -36,9 +36,9 @@ namespace Terminator.Device.Input.DirectX
                 };
         }
 
-        private int TranformAxis(int directXValue)
+        private double TranformAxis(int directXValue)
         {
-            return directXValue / 2 + 1 - 16384;
+            return ((double)directXValue / 2 + 1 - 16384) / ((double)16384);
         }
     }
 }

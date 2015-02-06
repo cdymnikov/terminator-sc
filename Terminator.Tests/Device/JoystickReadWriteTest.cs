@@ -34,24 +34,25 @@ namespace Terminator.Device
                     {input, _resolver.Resolve<IReaderFactory>().Create(input)} 
                 });
 
-            WriteAndRead(writer, reader, input, output, Axis.X, 1001);
-            WriteAndRead(writer, reader, input, output, Axis.X, 1000);
+            WriteAndRead(writer, reader, input, output, Axis.X, 1);
+            WriteAndRead(writer, reader, input, output, Axis.X, 0.5);
             WriteAndRead(writer, reader, input, output, Axis.X, 0);
-            WriteAndRead(writer, reader, input, output, Axis.X, -1000);
-            WriteAndRead(writer, reader, input, output, Axis.X, -1001);
+            WriteAndRead(writer, reader, input, output, Axis.X, -0.5);
+            WriteAndRead(writer, reader, input, output, Axis.X, -1);
         }
 
-        private void WriteAndRead(FrameWriter writer, FrameReader reader, Input.DirectX.Identifier input, Output.Joystick.Identifier output, Axis axis, int value)
+        private void WriteAndRead(FrameWriter writer, FrameReader reader, Input.DirectX.Identifier input, Output.Joystick.Identifier output, Axis axis, double value)
         {
             writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
                 { 
-                    {output, new State() {Axis = new Dictionary<Axis, int> 
+                    {output, new State() {Axis = new Dictionary<Axis, double> 
                         {
                             {axis, value}
                         } } }
                 });
             Thread.Sleep(1);
-            Assert.AreEqual(value, reader.Read()[input].Axis[Axis.X]);
+            var actual = reader.Read()[input].Axis[axis];
+            Assert.IsTrue(value <= actual + 0.001 && actual - 0.001 <= value);
         }
     }
 }
