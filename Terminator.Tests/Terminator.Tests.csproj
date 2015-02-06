@@ -69,6 +69,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="LoopManagerTests.cs" />
     <Compile Include="JoystickReadWriteTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -102,6 +102,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resolver.cs" />
+    <Compile Include="Transform\Installer.cs" />
+    <Compile Include="LoopManager.cs" />
+    <Compile Include="ILoopManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
