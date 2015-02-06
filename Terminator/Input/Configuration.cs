@@ -3,9 +3,9 @@ using System.Collections;
 using System.Text;
 using System.Configuration;
 using System.Xml;
-namespace Terminator.Configuration
+namespace Terminator.Input
 {
-    public class Devices : ConfigurationSection
+    public class Configuration : ConfigurationSection
     {
         [ConfigurationProperty("joysticks", IsRequired = true)]
         public Joysticks Joysticks
@@ -66,9 +66,13 @@ namespace Terminator.Configuration
             }
         }
 
-        public JoystickIdentifier this[string name]
+        public Joystick.Identifier this[string name]
         {
-            get { return (JoystickIdentifier)base.BaseGet(name); }
+            get 
+            {
+                var configId = (JoystickIdentifier)base.BaseGet(name);
+                return new Joystick.Identifier(configId.ProductName, configId.ProductNumber); 
+            }
         }
         #endregion
 

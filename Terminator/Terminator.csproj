@@ -79,7 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\Devices.cs" />
+    <Compile Include="Input\Configuration.cs" />
     <Compile Include="Input\Installer.cs" />
     <Compile Include="Input\Joystick\Identifier.cs" />
     <Compile Include="Input\Joystick\Installer.cs" />
