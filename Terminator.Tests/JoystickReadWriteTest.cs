@@ -33,6 +33,10 @@ namespace Terminator.Tests
             Thread.Sleep(1);
             Assert.AreEqual(1001, reader.ReadXAxis());
 
+            writer.WriteXAxis(0);
+            Thread.Sleep(1);
+            Assert.AreEqual(0, reader.ReadXAxis());
+
             writer.WriteXAxis(-1000);
             Thread.Sleep(1);
             Assert.AreEqual(-1000, reader.ReadXAxis());
