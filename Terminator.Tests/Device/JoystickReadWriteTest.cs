@@ -34,55 +34,24 @@ namespace Terminator.Device
                     {input, _resolver.Resolve<IReaderFactory>().Create(input)} 
                 });
 
-            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
-                { 
-                    {output, new State() {Axis = new Dictionary<Axis, int> 
-                        {
-                            {Axis.X, 1000}
-                        } } }
-                });
-            Thread.Sleep(1);
-            Assert.AreEqual(1000, reader.Read()[input].Axis[Axis.X]);
+            WriteAndRead(writer, reader, input, output, Axis.X, 1001);
+            WriteAndRead(writer, reader, input, output, Axis.X, 1000);
+            WriteAndRead(writer, reader, input, output, Axis.X, 0);
+            WriteAndRead(writer, reader, input, output, Axis.X, -1000);
+            WriteAndRead(writer, reader, input, output, Axis.X, -1001);
+        }
 
+        private void WriteAndRead(FrameWriter writer, FrameReader reader, Input.DirectX.Identifier input, Output.Joystick.Identifier output, Axis axis, int value)
+        {
             writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
                 { 
                     {output, new State() {Axis = new Dictionary<Axis, int> 
                         {
-                            {Axis.X, 1001}
+                            {axis, value}
                         } } }
                 });
             Thread.Sleep(1);
-            Assert.AreEqual(1001, reader.Read()[input].Axis[Axis.X]);
-
-            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
-                { 
-                    {output, new State() {Axis = new Dictionary<Axis, int> 
-                        {
-                            {Axis.X, 0}
-                        } } }
-                });
-            Thread.Sleep(1);
-            Assert.AreEqual(0, reader.Read()[input].Axis[Axis.X]);
-
-            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
-                { 
-                    {output, new State() {Axis = new Dictionary<Axis, int> 
-                        {
-                            {Axis.X, -1000}
-                        } } }
-                });
-            Thread.Sleep(1);
-            Assert.AreEqual(-1000, reader.Read()[input].Axis[Axis.X]);
-
-            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
-                { 
-                    {output, new State() {Axis = new Dictionary<Axis, int> 
-                        {
-                            {Axis.X, -1001}
-                        } } }
-                });
-            Thread.Sleep(1);
-            Assert.AreEqual(-1001, reader.Read()[input].Axis[Axis.X]);
+            Assert.AreEqual(value, reader.Read()[input].Axis[Axis.X]);
         }
     }
 }
