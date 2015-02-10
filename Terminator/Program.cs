@@ -7,7 +7,6 @@ namespace Terminator
     {
         static void Main(string[] args)
         {
-
         }
     }
 }

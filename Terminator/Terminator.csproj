@@ -79,10 +79,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Device\Input\Oculus\Identifier.cs" />
+    <Compile Include="Device\Input\Oculus\IHeadTracker.cs" />
+    <Compile Include="Device\Input\Oculus\IReader.cs" />
+    <Compile Include="Device\Input\Oculus\IHeadTrackerFactory.cs" />
+    <Compile Include="Device\Input\Oculus\IReaderFactory.cs" />
+    <Compile Include="Device\Input\Oculus\HeadTracker.cs" />
+    <Compile Include="Device\Input\Oculus\Reader.cs" />
+    <Compile Include="Device\Input\Oculus\HeadTrackerFactory.cs" />
+    <Compile Include="Device\Input\Oculus\ReaderFactory.cs" />
     <Compile Include="Device\Installer.cs" />
     <Compile Include="Device\Input\Configuration.cs" />
     <Compile Include="Device\Input\FrameReader.cs" />
     <Compile Include="Device\Input\IFrameReader.cs" />
+    <Compile Include="Device\Input\Oculus\Installer.cs" />
     <Compile Include="Device\State.cs" />
     <Compile Include="Device\Input\Installer.cs" />
     <Compile Include="Device\Input\DirectX\Identifier.cs" />

@@ -50,6 +50,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(SharpDXPackageBinDir)\SharpDX.DirectInput.dll</HintPath>
     </Reference>
+    <Reference Include="SharpOVR, Version=0.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpOVR.0.4.4.0\lib\SharpOVR.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
@@ -69,6 +73,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Device\Input\Oculus\HeadTrackerFactoryTests.cs" />
+    <Compile Include="Device\Input\Oculus\FakeTrackerFactory.cs" />
+    <Compile Include="Device\Input\Oculus\ReaderFactoryTests.cs" />
     <Compile Include="LoopManagerTests.cs" />
     <Compile Include="Device\JoystickReadWriteTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

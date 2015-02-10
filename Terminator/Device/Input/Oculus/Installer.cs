@@ -2,17 +2,15 @@
 using Castle.Windsor;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
-using SharpDX.DirectInput;
 
-namespace Terminator.Device.Input
+namespace Terminator.Device.Input.Oculus
 {
     public class Installer : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Install(new DirectX.Installer());
-            container.Install(new Oculus.Installer());
-            container.Register(Component.For<DirectInput>().ImplementedBy<DirectInput>());
+            container.Register(Component.For<IHeadTrackerFactory>().ImplementedBy<HeadTrackerFactory>());
+            container.Register(Component.For<IReaderFactory>().ImplementedBy<ReaderFactory>());
         }
     }
 }
