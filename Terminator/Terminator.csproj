@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Device\Input\IIdentifier.cs" />
     <Compile Include="Device\Input\Oculus\Identifier.cs" />
     <Compile Include="Device\Input\Oculus\IHeadTracker.cs" />
     <Compile Include="Device\Input\Oculus\IReader.cs" />
@@ -93,6 +94,12 @@
     <Compile Include="Device\Input\FrameReader.cs" />
     <Compile Include="Device\Input\IFrameReader.cs" />
     <Compile Include="Device\Input\Oculus\Installer.cs" />
+    <Compile Include="Device\Output\Mouse\Identifier.cs" />
+    <Compile Include="Device\Output\Mouse\Installer.cs" />
+    <Compile Include="Device\Output\Mouse\IWriter.cs" />
+    <Compile Include="Device\Output\Mouse\IWriterFactory.cs" />
+    <Compile Include="Device\Output\Mouse\Writer.cs" />
+    <Compile Include="Device\Output\Mouse\WriterFactory.cs" />
     <Compile Include="Device\State.cs" />
     <Compile Include="Device\Input\Installer.cs" />
     <Compile Include="Device\Input\DirectX\Identifier.cs" />
@@ -103,7 +110,7 @@
     <Compile Include="Device\Input\DirectX\IReader.cs" />
     <Compile Include="Device\Input\DirectX\DeviceNameResolver.cs" />
     <Compile Include="Device\Input\DirectX\Reader.cs" />
-    <Compile Include="MouseKeyIO.cs" />
+    <Compile Include="Device\Output\Mouse\MouseKeyIO.cs" />
     <Compile Include="Device\Output\Configuration.cs" />
     <Compile Include="Device\Output\FrameWriter.cs" />
     <Compile Include="Device\Output\IFrameWriter.cs" />

@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 // Copied from FreePie (https://github.com/AndersMalmgren/FreePIE) as per GPLv2.
-namespace Uplink
+namespace Terminator.Device.Output.Mouse
 {
     static class MouseKeyIO
     {

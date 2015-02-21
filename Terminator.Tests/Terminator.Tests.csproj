@@ -76,6 +76,7 @@
     <Compile Include="Device\Input\Oculus\HeadTrackerFactoryTests.cs" />
     <Compile Include="Device\Input\Oculus\FakeTrackerFactory.cs" />
     <Compile Include="Device\Input\Oculus\ReaderFactoryTests.cs" />
+    <Compile Include="Device\Output\Mouse\JoystickReadWriteTest.cs" />
     <Compile Include="LoopManagerTests.cs" />
     <Compile Include="Device\JoystickReadWriteTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
