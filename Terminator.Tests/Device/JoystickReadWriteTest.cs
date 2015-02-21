@@ -25,12 +25,12 @@ namespace Terminator.Device
             var output = ((Output.Configuration)ConfigurationManager.GetSection("test/output")).Joysticks["Virtual Joystick Output"];
 
             var writer = new FrameWriter(
-                new Dictionary<Output.IIdentifier, IWriter>() { 
+                new Dictionary<Output.IIdentifier, Output.IWriter>() { 
                     {output, _resolver.Resolve<IWriterFactory>().Create(output)} 
                 });
 
             var reader = new FrameReader(
-                new Dictionary<Input.IIdentifier, IReader>() { 
+                new Dictionary<Input.IIdentifier, Input.IReader>() { 
                     {input, _resolver.Resolve<IReaderFactory>().Create(input)} 
                 });
 

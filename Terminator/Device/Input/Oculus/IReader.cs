@@ -7,8 +7,7 @@ using Terminator.Device;
 
 namespace Terminator.Device.Input.Oculus
 {
-    public interface IReader
+    public interface IReader : Terminator.Device.Input.IReader
     {
-        State Read();
     }
 }

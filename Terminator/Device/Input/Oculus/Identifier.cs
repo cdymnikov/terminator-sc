@@ -7,7 +7,7 @@ using SharpDX.DirectInput;
 
 namespace Terminator.Device.Input.Oculus
 {
-    public class Identifier
+    public class Identifier : IIdentifier
     {
         public Identifier(int number)
         {

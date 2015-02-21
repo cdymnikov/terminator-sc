@@ -2,8 +2,7 @@
 
 namespace Terminator.Device.Output.Joystick
 {
-    public interface IWriter
+    public interface IWriter : Terminator.Device.Output.IWriter
     {
-        void Write(State state);
     }
 }

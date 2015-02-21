@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Device\Input\IIdentifier.cs" />
+    <Compile Include="Device\Input\IReader.cs" />
     <Compile Include="Device\Input\Oculus\Identifier.cs" />
     <Compile Include="Device\Input\Oculus\IHeadTracker.cs" />
     <Compile Include="Device\Input\Oculus\IReader.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Device\Input\IFrameReader.cs" />
     <Compile Include="Device\Input\Oculus\Installer.cs" />
     <Compile Include="Device\Output\IIdentifier.cs" />
+    <Compile Include="Device\Output\IWriter.cs" />
     <Compile Include="Device\Output\Mouse\Identifier.cs" />
     <Compile Include="Device\Output\Mouse\Installer.cs" />
     <Compile Include="Device\Output\Mouse\IWriter.cs" />
