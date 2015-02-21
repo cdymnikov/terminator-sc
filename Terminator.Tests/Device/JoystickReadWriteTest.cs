@@ -25,12 +25,12 @@ namespace Terminator.Device
             var output = ((Output.Configuration)ConfigurationManager.GetSection("test/output")).Joysticks["Virtual Joystick Output"];
 
             var writer = new FrameWriter(
-                new Dictionary<Output.Joystick.Identifier, IWriter>() { 
+                new Dictionary<Output.IIdentifier, IWriter>() { 
                     {output, _resolver.Resolve<IWriterFactory>().Create(output)} 
                 });
 
             var reader = new FrameReader(
-                new Dictionary<Input.DirectX.Identifier, IReader>() { 
+                new Dictionary<Input.IIdentifier, IReader>() { 
                     {input, _resolver.Resolve<IReaderFactory>().Create(input)} 
                 });
 
@@ -43,7 +43,7 @@ namespace Terminator.Device
 
         private void WriteAndRead(FrameWriter writer, FrameReader reader, Input.DirectX.Identifier input, Output.Joystick.Identifier output, Axis axis, double value)
         {
-            writer.Write(new Dictionary<Output.Joystick.Identifier, State> 
+            writer.Write(new Dictionary<Output.IIdentifier, State> 
                 { 
                     {output, new State() {Axis = new Dictionary<Axis, double> 
                         {

@@ -94,6 +94,7 @@
     <Compile Include="Device\Input\FrameReader.cs" />
     <Compile Include="Device\Input\IFrameReader.cs" />
     <Compile Include="Device\Input\Oculus\Installer.cs" />
+    <Compile Include="Device\Output\IIdentifier.cs" />
     <Compile Include="Device\Output\Mouse\Identifier.cs" />
     <Compile Include="Device\Output\Mouse\Installer.cs" />
     <Compile Include="Device\Output\Mouse\IWriter.cs" />

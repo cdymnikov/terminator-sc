@@ -7,7 +7,7 @@ using SharpDX.DirectInput;
 
 namespace Terminator.Device.Output.Joystick
 {
-    public class Identifier
+    public class Identifier : IIdentifier
     {
         public Identifier(uint id)
         {

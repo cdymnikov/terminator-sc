@@ -7,7 +7,7 @@ using SharpDX.DirectInput;
 
 namespace Terminator.Device.Input.DirectX
 {
-    public class Identifier
+    public class Identifier : IIdentifier
     {
         public Identifier(string productName, int number)
         {

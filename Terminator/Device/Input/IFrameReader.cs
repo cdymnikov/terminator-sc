@@ -6,6 +6,6 @@ namespace Terminator.Device.Input
 {
     public interface IFrameReader
     {
-        IDictionary<Identifier, State> Read();
+        IDictionary<IIdentifier, State> Read();
     }
 }

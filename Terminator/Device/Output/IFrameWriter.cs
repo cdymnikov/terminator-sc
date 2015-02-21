@@ -6,6 +6,6 @@ namespace Terminator.Device.Output
 {
     public interface IFrameWriter
     {
-        void Write(IDictionary<Identifier, State> frame);
+        void Write(IDictionary<IIdentifier, State> frame);
     }
 }
